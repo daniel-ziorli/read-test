@@ -1,7 +1,0 @@
-During my testing I noticed a couple of different things that are different between using fread and read. I found that fread was more consistent giving me similar times to previous times where as read would sometimes take half the time as the previous test. Furthermore fread seems to be quicker in every case even though it implements the read sys call. that being said read may be more useful with bigger buffer sizes as I tested with bigger buffer sizes of upwards of 4000 read would tend to beat fread. This makes sense as read is a low level sys call when working with bigger workloads it will have less functionality to work through therefore increasing speed. Another thing to note is that read is unbuffered where as fread is buffered which may be useful in some cases.
-
-Model: Asus 
-Processor: Intel® Core™ i7-6500U CPU @ 2.50GHz × 4 
-Ram: 7.7 GiB
-Hard Disk: 25GB HDD
-OS: Ubuntu 18.04.1 LTS 64-bit
